@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>Header</h1>
-    <p>This is a Header Position</p>
+    <!-- <p>This is a Header Position</p> -->
   </header>
 </template>
 <script>
