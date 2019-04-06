@@ -1,8 +1,10 @@
 <template>
 <div>
     <app-header></app-header>
-    <Levan></Levan>
+    <!-- <showpost></showpost> -->
+    <showget></showget>
     <app-footer></app-footer>
+
 </div>
 </template>
 
@@ -10,18 +12,21 @@
 
 import Header from './components/header.vue' ;
 import Footer from './components/footer.vue' ;
-import Levan from './Levan.vue'
+import showpost from './showpost.vue';
+import showget from './components/showget.vue';
 
 export default {
   components: {
     'app-header':Header ,
     'app-footer':Footer ,
-    'Levan':Levan ,
+    'showpost':showpost ,
+    'showget':showget ,
   },
 
   data () {
     return {
       welcome: "Welcome Text",
+
 
     }
   },
