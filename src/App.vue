@@ -1,8 +1,10 @@
 <template>
 <div>
+
     <app-header></app-header>
+    <router-view></router-view>
     <!-- <showpost></showpost> -->
-    <showget></showget>
+    <!-- <showget></showget> -->
     <app-footer></app-footer>
 
 </div>

@@ -41,7 +41,7 @@
 
 
 
-  <!-- <ul>
+  <ul>
       <li v-for="shownames, index  in names" @click="shownames.show = !shownames.show">
 
         {{ shownames.name }}
@@ -49,7 +49,7 @@
       <p v-show="shownames.show">{{ shownames.position }}</p>
       </li>
     </ul>
-    <button @click="dlt">Delete This</button> -->
+    <button @click="dlt">Delete This</button>
 </div>
 </template>
 
@@ -105,6 +105,13 @@ export default {
 
     }
   },
+
+  filters: {
+    toUppercase(value) {
+      return value.toUpperCase(); // Add Filter By Local
+    }
+  },
+
 
   methods: {
 
@@ -177,7 +184,7 @@ export default {
 }
 #blog {
     min-height:100vh;
-    width: 80%;
+    padding:50px;
     margin: 0 auto;
     label {
         display:block;
