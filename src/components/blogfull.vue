@@ -2,18 +2,10 @@
 
 <div class="showget">
 
-  {{ chawere }}
-
-  <input v-model="lev" type="text" name="" value="">
-  <button  @click="adelem" type="button" name="button">chawere</button>
-  <input v-model="search"  style="width:100%; padding:10px" type="text" name="" value="">
-  <div class="addstyle" v-for="showblog in filterblock">
-<h2 v-changecolor>{{ showblog.title | Upperall}}</h2>
-
-    <article>
-      {{ showblog.body | limit }}
-    </article>
-  </div>
+<h1>{{ this.item.title }}</h1>
+<article class="">
+  {{ this.item.body }}
+</article>
 
 </div>
 
@@ -47,9 +39,8 @@ export default {
 
   data () {
     return {
-      blogs: [],
-      chawere: [],
-
+      id: this.$route.params.id,
+      item: {},
       mat: '',
       lev: '',
       search: ''
@@ -67,10 +58,10 @@ export default {
 
   created(){
 
-    this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(data){
+    this.$http.get('https://jsonplaceholder.typicode.com/posts/' + this.id).then(function(data){
       console.log(data);
       // console.log(data.body[1].title);
-    this.blogs = data.body;
+    this.item = data.body;
 
     });
   }
